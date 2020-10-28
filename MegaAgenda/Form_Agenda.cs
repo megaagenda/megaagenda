@@ -29,7 +29,8 @@ namespace MegaAgenda
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form_Cad_Usuarios cadUsuarios = new Form_Cad_Usuarios();
+            cadUsuarios.ShowDialog();
         }
     }
 }
