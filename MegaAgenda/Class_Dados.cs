@@ -6,30 +6,49 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.CodeDom;
 
 namespace MegaAgenda
 {
     class Class_Dados
     {
+
+        public static bool verificaCPF(String cpf)
+        {
+            MySqlConnection conexao;
+            MySqlCommand comando;
+            string strSQL;
+            conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+            conexao.Open();
+            strSQL = "SELECT * FROM pessoa WHERE cpf = '" + cpf + "';";
+            comando = new MySqlCommand(strSQL, conexao);
+            MySqlDataReader resposta = comando.ExecuteReader();
+            return resposta.HasRows;
+        }
+
+
         public static void incluiPessoa(string dadosPessoa)
         {
             try
             {
-                string[] db = dadosPessoa.Split(';');
-                string @numBloco = db[0];
-                string @descricao = db[1];
+                string[] dp = dadosPessoa.Split(';');
+                string @cpf = dp[0];
+                string @nome = dp[1];
+                string @rg = dp[2];
+                string @sexo = dp[3];
+
                 MySqlConnection conexao;
                 MySqlCommand comando;
                 string strSQL;
                 conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
-                strSQL = ("INSERT INTO cadbloco(num_bloco, descricao) VALUES('" + numBloco + "', '" + descricao + "');");
+                strSQL = ("INSERT INTO pessoa (nome, cpf, rg, sexo) VALUES ('" + nome + "', '" + cpf + "', '" + rg + "', '" + sexo + "');");
                 comando = new MySqlCommand(strSQL, conexao);
                 conexao.Open();
                 comando.ExecuteNonQuery();
                 conexao.Close();
                 conexao = null;
                 comando = null;
-                MessageBox.Show("Bloco: " + descricao + " Incluido com Sucesso!");
+                MessageBox.Show(nome + " Cadastrado com Sucesso!");
             }
             catch
             {
