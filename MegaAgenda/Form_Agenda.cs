@@ -22,5 +22,9 @@ namespace MegaAgenda
             Form_Cad_Pessoas cadPessoas = new Form_Cad_Pessoas();
             cadPessoas.ShowDialog();
         }
+
+        private void Form_Agenda_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
