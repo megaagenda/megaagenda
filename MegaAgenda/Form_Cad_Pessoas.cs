@@ -43,6 +43,17 @@ namespace MegaAgenda
 
             string dadosPessoa = cpf + ";" + nome + ";" + rg  + ";" + sexo;
             Class_Dados.incluiPessoa(dadosPessoa);
+
+            boxCPF.Text = "";
+            boxNome.Text = "";
+            boxRG.Text = "";
+            boxCPF.Enabled = true;
+            rbMasc.Checked = true;
+            boxNome.Enabled = false;
+            boxRG.Enabled = false;
+            rbMasc.Enabled = false;
+            rbFem.Enabled = false;
+
         }
 
         private void rbMasc_CheckedChanged(object sender, EventArgs e)
