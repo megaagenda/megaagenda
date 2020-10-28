@@ -21,16 +21,22 @@ namespace MegaAgenda
         private void button1_Click(object sender, EventArgs e)
         {
             string @cpf = Class_Converte_Dados.cpf(boxCPF.Text);
-
             
             if (string.IsNullOrEmpty(cpf))
             {
-                MessageBox.Show("Favor informar um CPF!");
-                
+                MessageBox.Show("Favor informar um CPF!");                
             }
             else
             {
-                MessageBox.Show("CPF informado!");
+                bool resultado = Class_Dados.verificaCPF(cpf);
+                if (resultado == true)
+                {
+                    MessageBox.Show("CPF Encontrado!");
+                }
+                else
+                {
+                    MessageBox.Show("Pessoa não cadastrada!");
+                }
             }
         }
     }
