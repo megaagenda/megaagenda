@@ -109,6 +109,12 @@
   <ItemGroup>
     <Compile Include="Class_Converte_Dados.cs" />
     <Compile Include="Class_Dados.cs" />
+    <Compile Include="Form_Cad_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cad_Usuarios.Designer.cs">
+      <DependentUpon>Form_Cad_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Cad_Pessoas.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -26,5 +26,10 @@ namespace MegaAgenda
         private void Form_Agenda_Load(object sender, EventArgs e)
         {
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
