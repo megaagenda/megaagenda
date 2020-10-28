@@ -33,9 +33,9 @@
             this.boxCPF = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.boxNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.boxRG = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -78,12 +78,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Nome";
             // 
-            // textBox1
+            // boxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
-            this.textBox1.TabIndex = 4;
+            this.boxNome.Location = new System.Drawing.Point(45, 37);
+            this.boxNome.Name = "boxNome";
+            this.boxNome.Size = new System.Drawing.Size(274, 20);
+            this.boxNome.TabIndex = 4;
             // 
             // label3
             // 
@@ -94,12 +94,12 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "RG";
             // 
-            // textBox2
+            // boxRG
             // 
-            this.textBox2.Location = new System.Drawing.Point(45, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(274, 20);
-            this.textBox2.TabIndex = 6;
+            this.boxRG.Location = new System.Drawing.Point(45, 63);
+            this.boxRG.Name = "boxRG";
+            this.boxRG.Size = new System.Drawing.Size(274, 20);
+            this.boxRG.TabIndex = 6;
             // 
             // textBox3
             // 
@@ -142,9 +142,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.boxRG);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.boxCPF);
@@ -153,6 +153,7 @@
             this.Name = "Form_Cad_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuários";
+            this.Load += new System.EventHandler(this.Form_Cad_Usuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,9 +165,9 @@
         private System.Windows.Forms.MaskedTextBox boxCPF;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox boxNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox boxRG;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;

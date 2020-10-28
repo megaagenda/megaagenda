@@ -26,7 +26,6 @@ namespace MegaAgenda
             return resposta.HasRows;
         }
 
-
         public static void incluiPessoa(string dadosPessoa)
         {
             try
@@ -54,6 +53,28 @@ namespace MegaAgenda
             {
                 MessageBox.Show("Não é possível cadastrar dois blocos com o mesmo número");
             }
+        }
+
+        public static string buscaUsuario(string cpf)
+        {
+            MySqlConnection conexao;
+            MySqlCommand comando;
+            string strSQL;
+            conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+            conexao.Open();
+            strSQL = "SELECT id, nome, rg FROM pessoa WHERE cpf = '" + cpf + "';";
+            comando = new MySqlCommand(strSQL, conexao);
+            MySqlDataReader resposta = comando.ExecuteReader();
+            string rs = "";
+            while (resposta.Read())
+            {
+                rs = (  resposta["id"].ToString() + ";"
+                      + resposta["nome"].ToString() + ";"
+                      + resposta["rg"].ToString());
+            }
+            resposta.Close();
+            conexao.Close();
+            return rs;
         }
     }
 }
