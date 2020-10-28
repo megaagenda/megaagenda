@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class_Converte_Dados.cs" />
     <Compile Include="Class_Dados.cs" />
     <Compile Include="Form_Cad_Pessoas.cs">
       <SubType>Form</SubType>

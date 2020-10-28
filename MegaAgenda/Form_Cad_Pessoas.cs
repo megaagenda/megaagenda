@@ -21,5 +21,13 @@ namespace MegaAgenda
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string @cpf = boxCPF.Text;
+            string @nome = boxNome.Text;
+            string @rg = boxRG.Text;
+            MessageBox.Show(cpf + nome + rg);
+        }
     }
 }

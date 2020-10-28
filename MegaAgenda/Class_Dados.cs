@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace MegaAgenda
@@ -14,7 +15,7 @@ namespace MegaAgenda
         {
             try
             {
-                string[] db = dadosBloco.Split(';');
+                string[] db = dadosPessoa.Split(';');
                 string @numBloco = db[0];
                 string @descricao = db[1];
                 MySqlConnection conexao;

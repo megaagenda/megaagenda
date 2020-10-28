@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Cad_Pessoas));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.boxNome = new System.Windows.Forms.TextBox();
+            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.boxRG = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -52,20 +52,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
-            // textBox1
+            // boxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 20);
-            this.textBox1.TabIndex = 1;
+            this.boxNome.Location = new System.Drawing.Point(48, 38);
+            this.boxNome.Name = "boxNome";
+            this.boxNome.Size = new System.Drawing.Size(248, 20);
+            this.boxNome.TabIndex = 1;
             // 
-            // maskedTextBox1
+            // boxCPF
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(48, 12);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(91, 20);
-            this.maskedTextBox1.TabIndex = 2;
+            this.boxCPF.Location = new System.Drawing.Point(48, 12);
+            this.boxCPF.Mask = "000.000.000-00";
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(91, 20);
+            this.boxCPF.TabIndex = 2;
             // 
             // label2
             // 
@@ -85,12 +85,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "RG";
             // 
-            // textBox2
+            // boxRG
             // 
-            this.textBox2.Location = new System.Drawing.Point(48, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 20);
-            this.textBox2.TabIndex = 5;
+            this.boxRG.Location = new System.Drawing.Point(48, 65);
+            this.boxRG.Name = "boxRG";
+            this.boxRG.Size = new System.Drawing.Size(248, 20);
+            this.boxRG.TabIndex = 5;
             // 
             // label4
             // 
@@ -131,6 +131,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Incluir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -161,11 +162,11 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.boxRG);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxCPF);
+            this.Controls.Add(this.boxNome);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Cad_Pessoas";
@@ -180,11 +181,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox boxNome;
+        private System.Windows.Forms.MaskedTextBox boxCPF;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox boxRG;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
