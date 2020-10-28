@@ -89,5 +89,35 @@ namespace MegaAgenda
             MySqlDataReader resposta = comando.ExecuteReader();
             return resposta.HasRows;
         }
+
+
+        public static void incluiUsuario(string dadosUsuario)
+        {
+            try
+            {
+                string[] du = dadosUsuario.Split(';');
+                string @id_pessoa = du[0];
+                string @nomeUsuario = du[1];
+                string @senha = du[2];
+
+                MySqlConnection conexao;
+                MySqlCommand comando;
+                string strSQL;
+                conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+                strSQL = ("INSERT INTO usuarios (id_pessoa, usuario, senha) VALUES ('" + id_pessoa + "', '" + nomeUsuario + "', '" + senha + "');");
+                comando = new MySqlCommand(strSQL, conexao);
+                conexao.Open();
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                conexao = null;
+                comando = null;
+                MessageBox.Show("Usuário Cadastrado com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

@@ -73,5 +73,22 @@ namespace MegaAgenda
         {
 
         }
+
+        private void btIncluir_Click(object sender, EventArgs e)
+        {
+            string @cpf = Class_Converte_Dados.cpf(boxCPF.Text);
+            string @id = "";
+            string usuarioPessoa = Class_Dados.buscaUsuario(cpf);
+            string[] resultadoPessoa = usuarioPessoa.Split(';');
+            id = resultadoPessoa[0];
+
+            string @nomeUsuario = boxUsuario.Text;
+            string @senha = boxSenha.Text;
+
+            string dadosUsuario = id + ";" + nomeUsuario + ";" + senha;
+
+            Class_Dados.incluiUsuario(dadosUsuario);
+
+        }
     }
 }

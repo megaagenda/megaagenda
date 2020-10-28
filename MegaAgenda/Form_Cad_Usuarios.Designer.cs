@@ -36,9 +36,9 @@
             this.boxNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.boxRG = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.boxUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.boxSenha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btIncluir = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
@@ -104,12 +104,12 @@
             this.boxRG.Size = new System.Drawing.Size(274, 20);
             this.boxRG.TabIndex = 6;
             // 
-            // textBox3
+            // boxUsuario
             // 
-            this.textBox3.Location = new System.Drawing.Point(45, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(137, 20);
-            this.textBox3.TabIndex = 8;
+            this.boxUsuario.Location = new System.Drawing.Point(45, 89);
+            this.boxUsuario.Name = "boxUsuario";
+            this.boxUsuario.Size = new System.Drawing.Size(137, 20);
+            this.boxUsuario.TabIndex = 8;
             // 
             // label4
             // 
@@ -120,12 +120,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Usuário";
             // 
-            // textBox4
+            // boxSenha
             // 
-            this.textBox4.Location = new System.Drawing.Point(45, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 20);
-            this.textBox4.TabIndex = 10;
+            this.boxSenha.Location = new System.Drawing.Point(45, 115);
+            this.boxSenha.Name = "boxSenha";
+            this.boxSenha.Size = new System.Drawing.Size(137, 20);
+            this.boxSenha.TabIndex = 10;
             // 
             // label5
             // 
@@ -144,6 +144,7 @@
             this.btIncluir.TabIndex = 11;
             this.btIncluir.Text = "Incluir";
             this.btIncluir.UseVisualStyleBackColor = true;
+            this.btIncluir.Click += new System.EventHandler(this.btIncluir_Click);
             // 
             // btAlterar
             // 
@@ -171,9 +172,9 @@
             this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btIncluir);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.boxSenha);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.boxUsuario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.boxRG);
             this.Controls.Add(this.label3);
@@ -201,9 +202,9 @@
         private System.Windows.Forms.TextBox boxNome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox boxRG;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox boxUsuario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox boxSenha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btIncluir;
         private System.Windows.Forms.Button btAlterar;
