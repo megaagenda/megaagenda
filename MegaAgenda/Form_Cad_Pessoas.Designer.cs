@@ -184,7 +184,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Cad_Pessoas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastros Pessoas";
+            this.Text = "Cadastro de Pessoas";
             this.Load += new System.EventHandler(this.Form_Cad_Pessoas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -70,3 +70,4 @@ C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.csproj.CoreCompileInputs.
 C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.csproj.CopyComplete
 C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.exe
 C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.pdb
+C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.Form_Cad_Usuarios.resources
