@@ -18,6 +18,9 @@ namespace MegaAgenda
             InitializeComponent();
             boxNome.Enabled = false;
             boxRG.Enabled = false;
+            btIncluir.Enabled = false;
+            btAlterar.Enabled = false;
+            btExcluir.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,11 +46,21 @@ namespace MegaAgenda
                     id = resultadoPessoa[0];
                     nomePessoa = resultadoPessoa[1];
                     rgPessoa = resultadoPessoa[2];
-                    //
                     boxNome.Text = nomePessoa;
                     boxRG.Text = rgPessoa;
-  
-                    //MessageBox.Show(usuarioPessoa);
+
+                    bool usuarioExist = Class_Dados.verificaUsuario(id);
+                    
+                    if (usuarioExist == true)
+                    {
+                        btAlterar.Enabled = true;
+                        btExcluir.Enabled = true;
+                    }
+                    else
+                    {
+                        btIncluir.Enabled = true;
+                    }
+
                 }
                 else
                 {

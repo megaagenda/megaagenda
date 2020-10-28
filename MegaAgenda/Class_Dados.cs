@@ -49,9 +49,9 @@ namespace MegaAgenda
                 comando = null;
                 MessageBox.Show(nome + " Cadastrado com Sucesso!");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Não é possível cadastrar dois blocos com o mesmo número");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -75,6 +75,19 @@ namespace MegaAgenda
             resposta.Close();
             conexao.Close();
             return rs;
+        }
+
+        public static bool verificaUsuario(String id)
+        {
+            MySqlConnection conexao;
+            MySqlCommand comando;
+            string strSQL;
+            conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+            conexao.Open();
+            strSQL = "SELECT * FROM usuarios WHERE id_pessoa = '" + id + "';";
+            comando = new MySqlCommand(strSQL, conexao);
+            MySqlDataReader resposta = comando.ExecuteReader();
+            return resposta.HasRows;
         }
     }
 }

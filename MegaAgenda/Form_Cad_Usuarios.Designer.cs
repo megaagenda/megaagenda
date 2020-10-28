@@ -40,6 +40,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btIncluir = new System.Windows.Forms.Button();
+            this.btAlterar = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -133,11 +136,41 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Senha";
             // 
+            // btIncluir
+            // 
+            this.btIncluir.Location = new System.Drawing.Point(45, 144);
+            this.btIncluir.Name = "btIncluir";
+            this.btIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btIncluir.TabIndex = 11;
+            this.btIncluir.Text = "Incluir";
+            this.btIncluir.UseVisualStyleBackColor = true;
+            // 
+            // btAlterar
+            // 
+            this.btAlterar.Location = new System.Drawing.Point(126, 144);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btAlterar.TabIndex = 12;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btExcluir
+            // 
+            this.btExcluir.Location = new System.Drawing.Point(207, 144);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btExcluir.TabIndex = 13;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            // 
             // Form_Cad_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 278);
+            this.ClientSize = new System.Drawing.Size(325, 176);
+            this.Controls.Add(this.btExcluir);
+            this.Controls.Add(this.btAlterar);
+            this.Controls.Add(this.btIncluir);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
@@ -172,5 +205,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btIncluir;
+        private System.Windows.Forms.Button btAlterar;
+        private System.Windows.Forms.Button btExcluir;
     }
 }
