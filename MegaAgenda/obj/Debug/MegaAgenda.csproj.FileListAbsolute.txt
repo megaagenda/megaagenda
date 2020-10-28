@@ -1,0 +1,10 @@
+C:\agenda\MegaAgenda\bin\Debug\MegaAgenda.exe.config
+C:\agenda\MegaAgenda\bin\Debug\MegaAgenda.exe
+C:\agenda\MegaAgenda\bin\Debug\MegaAgenda.pdb
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.csprojAssemblyReference.cache
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.Form_Agenda.resources
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.Properties.Resources.resources
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.csproj.GenerateResource.cache
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.csproj.CoreCompileInputs.cache
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.exe
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.pdb
