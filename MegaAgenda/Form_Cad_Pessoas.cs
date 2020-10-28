@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace MegaAgenda
 {
-    public partial class Form_Agenda : Form
+    public partial class Form_Cad_Pessoas : Form
     {
-        public Form_Agenda()
+        public Form_Cad_Pessoas()
         {
             InitializeComponent();
-        }
-
-        private void pessoasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Cad_Pessoas cadPessoas = new Form_Cad_Pessoas();
-            cadPessoas.ShowDialog();
         }
     }
 }
