@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +26,7 @@ namespace MegaAgenda
 
         private void button1_Click(object sender, EventArgs e)
         {
+            boxCPF.Enabled = false;
             string @cpf = Class_Converte_Dados.cpf(boxCPF.Text);
             string @usuarioPessoa = "";
             string @id = "";
@@ -40,7 +42,7 @@ namespace MegaAgenda
                 bool resultado = Class_Dados.verificaCPF(cpf);
                 if (resultado == true)
                 {
-                    MessageBox.Show("CPF Encontrado!");
+                    //MessageBox.Show("CPF Encontrado!");
                     usuarioPessoa = Class_Dados.buscaUsuario(cpf);
                     string[] resultadoPessoa = usuarioPessoa.Split(';');
                     id = resultadoPessoa[0];
@@ -55,6 +57,12 @@ namespace MegaAgenda
                     {
                         btAlterar.Enabled = true;
                         btExcluir.Enabled = true;
+                        string dadosSenha = Class_Dados.buscaSenha(id);
+                        string[] ds = dadosSenha.Split(';');
+                        string @usuario = ds[0];
+                        string @senha = ds[1];
+                        boxUsuario.Text = usuario;
+                        boxSenha.Text = senha;
                     }
                     else
                     {
@@ -81,14 +89,10 @@ namespace MegaAgenda
             string usuarioPessoa = Class_Dados.buscaUsuario(cpf);
             string[] resultadoPessoa = usuarioPessoa.Split(';');
             id = resultadoPessoa[0];
-
             string @nomeUsuario = boxUsuario.Text;
             string @senha = boxSenha.Text;
-
             string dadosUsuario = id + ";" + nomeUsuario + ";" + senha;
-
             Class_Dados.incluiUsuario(dadosUsuario);
-
         }
     }
 }

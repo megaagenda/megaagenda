@@ -77,6 +77,28 @@ namespace MegaAgenda
             return rs;
         }
 
+        public static string buscaSenha(string id)
+        {
+            MySqlConnection conexao;
+            MySqlCommand comando;
+            string strSQL;
+            conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+            conexao.Open();
+            strSQL = "SELECT usuario, senha FROM usuarios WHERE id_pessoa = '" + id + "';";
+            comando = new MySqlCommand(strSQL, conexao);
+            MySqlDataReader resposta = comando.ExecuteReader();
+            string rs = "";
+            while (resposta.Read())
+            {
+                rs = (resposta["usuario"].ToString() + ";"
+                      + resposta["senha"].ToString());
+            }
+            resposta.Close();
+            conexao.Close();
+            return rs;
+        }
+
+
         public static bool verificaUsuario(String id)
         {
             MySqlConnection conexao;
