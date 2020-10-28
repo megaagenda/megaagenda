@@ -8,3 +8,4 @@ C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.csproj.GenerateResource.cache
 C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.csproj.CoreCompileInputs.cache
 C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.exe
 C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.pdb
+C:\agenda\MegaAgenda\obj\Debug\MegaAgenda.Form_Cad_Pessoas.resources
