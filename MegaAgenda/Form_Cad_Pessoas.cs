@@ -16,5 +16,10 @@ namespace MegaAgenda
         {
             InitializeComponent();
         }
+
+        private void Form_Cad_Pessoas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
