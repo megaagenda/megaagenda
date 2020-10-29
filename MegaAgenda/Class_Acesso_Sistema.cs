@@ -11,6 +11,7 @@ namespace MegaAgenda
     {
         public static bool confereAcesso(String usuario, String senha)
         {
+            // string bruno = "Bruno Lelis";
             MySqlConnection conexao;
             MySqlCommand comando;
             string strSQL;
