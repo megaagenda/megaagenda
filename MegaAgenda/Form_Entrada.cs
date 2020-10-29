@@ -15,6 +15,7 @@ namespace MegaAgenda
         public Form_Entrada()
         {
             InitializeComponent();
+            boxSenha.PasswordChar = '*';
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,6 +48,11 @@ namespace MegaAgenda
                     boxSenha.Text = string.Empty;
                 }
             }
+        }
+
+        private void Form_Entrada_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
