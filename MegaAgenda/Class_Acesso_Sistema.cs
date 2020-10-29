@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MegaAgenda
 {
@@ -11,15 +12,24 @@ namespace MegaAgenda
     {
         public static bool confereAcesso(String usuario, String senha)
         {
-            MySqlConnection conexao;
-            MySqlCommand comando;
-            string strSQL;
-            conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
-            conexao.Open();
-            strSQL = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "' and senha = '" + senha + "';";
-            comando = new MySqlCommand(strSQL, conexao);
-            MySqlDataReader resposta = comando.ExecuteReader();
-            return resposta.HasRows;
+            bool resultado = false;
+            try
+            {
+                MySqlConnection conexao;
+                MySqlCommand comando;
+                string strSQL;
+                conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+                conexao.Open();
+                strSQL = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "' and senha = '" + senha + "';";
+                comando = new MySqlCommand(strSQL, conexao);
+                MySqlDataReader resposta = comando.ExecuteReader();
+                resultado =  resposta.HasRows;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível conectar com o Banco!");
+            }
+            return resultado;
         }
 
         public static string dataAtual(string data)
