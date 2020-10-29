@@ -71,3 +71,4 @@ C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.csproj.CopyComplete
 C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.exe
 C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.pdb
 C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.Form_Cad_Usuarios.resources
+C:\agenda\megaagenda\MegaAgenda\obj\Release\MegaAgenda.Form_Entrada.resources

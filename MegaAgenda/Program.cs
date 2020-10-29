@@ -21,7 +21,7 @@ namespace MegaAgenda
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Agenda());
+            Application.Run(new Form_Entrada());
         }
     }
 }
