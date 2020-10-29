@@ -12,7 +12,6 @@ namespace MegaAgenda
 {
     class Class_Dados
     {
-
         public static bool verificaCPF(String cpf)
         {
             MySqlConnection conexao;
@@ -209,6 +208,5 @@ namespace MegaAgenda
                 MessageBox.Show(ex.Message);
             }
         }
-
     }
 }
