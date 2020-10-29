@@ -28,9 +28,24 @@ namespace MegaAgenda
             }
             else
             {
-                MessageBox.Show("Usuário e senha incorretos!");
-                boxUsuario.Text = string.Empty;
-                boxSenha.Text = string.Empty;
+                DateTime thisDay = DateTime.Today;
+                string dataAtual = Class_Acesso_Sistema.dataAtual(thisDay.ToString());
+                string dadosChave = dataAtual + "megaagenda";
+                string senha = Class_Acesso_Sistema.geraChave(dadosChave);
+
+                if (boxUsuario.Text == "admin" && boxSenha.Text == senha)
+                {
+                    this.Hide();
+                    Form AbrePrograma = new Form_Agenda();
+                    AbrePrograma.Closed += (s, args) => this.Close();
+                    AbrePrograma.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário e senha incorretos!");
+                    boxUsuario.Text = string.Empty;
+                    boxSenha.Text = string.Empty;
+                }
             }
         }
     }
