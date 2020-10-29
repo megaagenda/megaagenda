@@ -186,5 +186,29 @@ namespace MegaAgenda
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public static void excluiUsuario(string id)
+        {
+            try
+            {
+                MySqlConnection conexao;
+                MySqlCommand comando;
+                string strSQL;
+                conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+                strSQL = ("DELETE FROM usuarios WHERE id = '" + id + "';");
+                comando = new MySqlCommand(strSQL, conexao);
+                conexao.Open();
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                conexao = null;
+                comando = null;
+                MessageBox.Show("Usuário Excluido com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

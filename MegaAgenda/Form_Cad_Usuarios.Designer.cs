@@ -164,6 +164,7 @@
             this.btExcluir.TabIndex = 13;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // Form_Cad_Usuarios
             // 

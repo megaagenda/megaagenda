@@ -42,7 +42,6 @@ namespace MegaAgenda
                 bool resultado = Class_Dados.verificaCPF(cpf);
                 if (resultado == true)
                 {
-                    //MessageBox.Show("CPF Encontrado!");
                     usuarioPessoa = Class_Dados.buscaUsuario(cpf);
                     string[] resultadoPessoa = usuarioPessoa.Split(';');
                     id = resultadoPessoa[0];
@@ -93,6 +92,7 @@ namespace MegaAgenda
             string @senha = boxSenha.Text;
             string dadosUsuario = id + ";" + nomeUsuario + ";" + senha;
             Class_Dados.incluiUsuario(dadosUsuario);
+            limpaGrid();
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
@@ -103,17 +103,28 @@ namespace MegaAgenda
             string @senha = boxSenha.Text;
             string dadosUsuario = id + ";" + usuario + ";" + senha;
             Class_Dados.alteraUsuario(dadosUsuario);
+            limpaGrid();
+        }
 
+        private void limpaGrid()
+        {
             boxCPF.Enabled = true;
             boxNome.Text = "";
             boxRG.Text = "";
             boxUsuario.Text = "";
             boxSenha.Text = "";
             boxCPF.Text = "";
-
             btIncluir.Enabled = false;
             btAlterar.Enabled = false;
             btExcluir.Enabled = false;
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            string @cpf = Class_Converte_Dados.cpf(boxCPF.Text);
+            string @id = Class_Dados.buscaIDUsuario(cpf);
+            Class_Dados.excluiUsuario(id);
+            limpaGrid();
         }
     }
 }
