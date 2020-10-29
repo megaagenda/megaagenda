@@ -53,25 +53,7 @@ namespace MegaAgenda
 
         private void Form_Entrada_Load(object sender, EventArgs e)
         {
-            string pastaConfig = @"C:\AGENDA\";
-            string arqConfig = @"MEGAAGENDA.CFG";
-            string pathString = System.IO.Path.Combine(pastaConfig, arqConfig);
-
-            if (!System.IO.File.Exists(pathString))
-            {
-                using (System.IO.FileStream fs = System.IO.File.Create(pathString)) ;
-            }
-
-            string[] confValores = File.ReadAllLines(pathString);
-            for (int i = 0; i < confValores.Length; i++)
-            {
-                Program.endBanco = confValores[0];
-                Program.portBanco = confValores[1];
-                Program.database = confValores[2];
-                Program.userBanco = confValores[3];
-                Program.senhaBanco = confValores[4];
-            }
-
+            Class_Acesso_Sistema.carregaDB();
         }
     }
 }

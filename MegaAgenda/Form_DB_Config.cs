@@ -42,6 +42,7 @@ namespace MegaAgenda
             arq.WriteLine(boxUsuario.Text);
             arq.WriteLine(boxSenha.Text);
             arq.Close();
+            Class_Acesso_Sistema.carregaDB();
             MessageBox.Show("Informações Gravadas!");
         }
 
