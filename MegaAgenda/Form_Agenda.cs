@@ -32,5 +32,11 @@ namespace MegaAgenda
             Form_Cad_Usuarios cadUsuarios = new Form_Cad_Usuarios();
             cadUsuarios.ShowDialog();
         }
+
+        private void dBConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_DB_Config dbConfig = new Form_DB_Config();
+            dbConfig.ShowDialog();
+        }
     }
 }

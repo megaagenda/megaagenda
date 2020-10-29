@@ -1,0 +1,10 @@
+C:\agenda\megaagenda\GERADOR\GeradorSenha\bin\Release\GeradorSenha.exe.config
+C:\agenda\megaagenda\GERADOR\GeradorSenha\bin\Release\GeradorSenha.exe
+C:\agenda\megaagenda\GERADOR\GeradorSenha\bin\Release\GeradorSenha.pdb
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.csprojAssemblyReference.cache
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.Form_Gerador.resources
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.Properties.Resources.resources
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.csproj.GenerateResource.cache
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.csproj.CoreCompileInputs.cache
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.exe
+C:\agenda\megaagenda\GERADOR\GeradorSenha\obj\Release\GeradorSenha.pdb

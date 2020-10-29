@@ -40,9 +40,10 @@
             // 
             // boxUsuario
             // 
+            this.boxUsuario.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxUsuario.Location = new System.Drawing.Point(133, 28);
             this.boxUsuario.Name = "boxUsuario";
-            this.boxUsuario.Size = new System.Drawing.Size(147, 20);
+            this.boxUsuario.Size = new System.Drawing.Size(147, 23);
             this.boxUsuario.TabIndex = 0;
             this.boxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -66,9 +67,10 @@
             // 
             // boxSenha
             // 
+            this.boxSenha.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxSenha.Location = new System.Drawing.Point(133, 68);
             this.boxSenha.Name = "boxSenha";
-            this.boxSenha.Size = new System.Drawing.Size(147, 20);
+            this.boxSenha.Size = new System.Drawing.Size(147, 23);
             this.boxSenha.TabIndex = 2;
             this.boxSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
