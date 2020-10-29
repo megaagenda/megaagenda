@@ -112,7 +112,6 @@ namespace MegaAgenda
             return resposta.HasRows;
         }
 
-
         public static void incluiUsuario(string dadosUsuario)
         {
             try
@@ -141,5 +140,51 @@ namespace MegaAgenda
             }
         }
 
+        public static string buscaIDUsuario(string cpf)
+        {
+            MySqlConnection conexao;
+            MySqlCommand comando;
+            string strSQL;
+            conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+            conexao.Open();
+            strSQL = "SELECT id FROM usuarios WHERE id_pessoa = (SELECT id from pessoa WHERE cpf = '" + cpf +"');";
+            comando = new MySqlCommand(strSQL, conexao);
+            MySqlDataReader resposta = comando.ExecuteReader();
+            string rs = "";
+            while (resposta.Read())
+            {
+                rs = (resposta["id"].ToString());
+            }
+            resposta.Close();
+            conexao.Close();
+            return rs;
+        }
+
+        public static void alteraUsuario(string dadosUsuario)
+        {
+            try
+            {
+                string[] du = dadosUsuario.Split(';');
+                string @id = du[0];
+                string @usuario = du[1];
+                string @senha = du[2];
+                MySqlConnection conexao;
+                MySqlCommand comando;
+                string strSQL;
+                conexao = new MySqlConnection("Server = " + Program.endBanco + "; Port = " + Program.portBanco + "; Database = " + Program.database + "; Uid = " + Program.userBanco + "; Pwd = " + Program.senhaBanco + "; pooling = false; convert zero datetime=True;");
+                strSQL = ("UPDATE usuarios SET usuario = '" + usuario + "', senha = '" + senha + "' WHERE id = ('" + id + "');");
+                comando = new MySqlCommand(strSQL, conexao);
+                conexao.Open();
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                conexao = null;
+                comando = null;
+                MessageBox.Show("Usuário Atualizado com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
